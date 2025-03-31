@@ -1,15 +1,15 @@
 import re, os, time
 
 id_pattern = re.compile(r'^.\d+$') 
-ADMINS = [6321064549,6933669203,6618620897,1110013191,1302933634]
+ADMINS = [1110013191, 6698364560]
 class Config(object):
     # pyro client config
     API_ID    = os.environ.get("API_ID", 26634100)
     API_HASH  = os.environ.get("API_HASH", "9ea49405d5a93e784114c469f5ce4bbd")
-    BOT_TOKEN = os.environ.get("BOT_TOKEN", "7930902554:AAGO47npDoLwTBC2-0RyHAyyxm275jQKfaU")
+    BOT_TOKEN = os.environ.get("BOT_TOKEN", "7704152367:AAF_qMjNQx7ou0B4LnTUVYIBdDHSiNzLUdI")
    
     # database config
-    DB_NAME = os.environ.get("DB_NAME","rename")
+    DB_NAME = os.environ.get("DB_NAME","testybot")
     DB_URL  = os.environ.get("DB_URL","mongodb+srv://Sukuna:Sukuna123@cluster0.xya73s9.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
  
     # other configs
@@ -18,8 +18,8 @@ class Config(object):
     ADMIN       = [int(admin) if id_pattern.search(admin) else admin for admin in os.environ.get('ADMIN', '6321064549 1110013191 6933669203 6618620897').split()]
     FORCE_SUB_1 = os.environ.get("FORCE_SUB_1", "")
     FORCE_SUB_2 = os.environ.get("FORCE_SUB_2", "")
-    LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", -1002262927916))
-    DUMP_CHANNEL = int(os.environ.get("DUMP_CHANNEL", "-1002262927916"))
+    LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1002183841044"))
+    DUMP_CHANNEL = int(os.environ.get("DUMP_CHANNEL", "-1002187474007"))
 
     # wes response configuration     
     WEBHOOK = bool(os.environ.get("WEBHOOK", True))
