@@ -1,25 +1,25 @@
 import re, os, time
 
 id_pattern = re.compile(r'^.\d+$') 
-ADMINS = [1110013191, 6698364560]
+ADMINS = [1110013191, 6698364560, 6663845789, 5126166591, 6618620897, 7445650518]
 class Config(object):
     # pyro client config
     API_ID    = os.environ.get("API_ID", 26634100)
     API_HASH  = os.environ.get("API_HASH", "9ea49405d5a93e784114c469f5ce4bbd")
-    BOT_TOKEN = os.environ.get("BOT_TOKEN", "7704152367:AAF_qMjNQx7ou0B4LnTUVYIBdDHSiNzLUdI")
+    BOT_TOKEN = os.environ.get("BOT_TOKEN", "8052725016:AAEGHXgWtF13jP9xMjRBVpPjNC6ggVmLWBE")
    
     # database config
-    DB_NAME = os.environ.get("DB_NAME","testybot")
-    DB_URL  = os.environ.get("DB_URL","mongodb+srv://Sukuna:Sukuna123@cluster0.xya73s9.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+    DB_NAME = os.environ.get("DB_NAME","rename")
+    DB_URL  = os.environ.get("DB_URL","")
  
     # other configs
     BOT_UPTIME  = time.time()
-    START_PIC   = os.environ.get("START_PIC", "https://envs.sh/w3g.mp4")
-    ADMIN       = [int(admin) if id_pattern.search(admin) else admin for admin in os.environ.get('ADMIN', '6321064549 1110013191 6933669203 6618620897').split()]
-    FORCE_SUB_1 = os.environ.get("FORCE_SUB_1", "")
-    FORCE_SUB_2 = os.environ.get("FORCE_SUB_2", "")
+    START_PIC   = os.environ.get("START_PIC", "https://envs.sh/_A8.jpg")
+    ADMIN       = [int(admin) if id_pattern.search(admin) else admin for admin in os.environ.get('ADMIN', '1110013191, 6698364560, 6663845789, 5126166591, 6618620897, 7445650518').split()]
+    FORCE_SUB_1 = os.environ.get("FORCE_SUB_1", "-1001707354372")
+    FORCE_SUB_2 = os.environ.get("FORCE_SUB_2", "-100167792809")
     LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1002183841044"))
-    DUMP_CHANNEL = int(os.environ.get("DUMP_CHANNEL", "-1002187474007"))
+    DUMP_CHANNEL = int(os.environ.get("DUMP_CHANNEL", "-100264875295"))
 
     # wes response configuration     
     WEBHOOK = bool(os.environ.get("WEBHOOK", True))
@@ -29,73 +29,84 @@ class Config(object):
 class Txt(object):
     # part of text configuration
     START_TXT = """
-<b>ʜᴇʏ {}!✨
+<b>Hey {}! 𖤐</b>
 
-🫧 ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ ᴛʜᴇ ᴀᴅᴠᴀɴᴄᴇᴅ ʀᴇɴᴀᴍᴇ ʙᴏᴛ!
-ᴡʜɪᴄʜ ᴄᴀɴ ᴍᴀɴᴜᴀʟʟʏ ʀᴇɴᴀᴍᴇ ʏᴏᴜʀ ғɪʟᴇs ᴡɪᴛʜ ᴄᴜsᴛᴏᴍ ᴄᴀᴘᴛɪᴏɴ ᴀɴᴅ ᴛʜᴜᴍʙɴᴀɪʟ ᴀɴᴅ ᴀʟsᴏ ᴄᴀɴ sᴇᴛ ᴘʀᴇғɪx ᴀɴᴅ sᴜғғɪx ᴏɴ ʏᴏᴜʀ ғɪʟᴇs.⚡️
+Welcome to <b>Nxivm Rename Bot! ⨳</b>
 
-✨ ᴛʜɪs ʙᴏᴛ ɪs ᴄʀᴇᴀᴛᴇᴅ ʙʏ : <a href=https://t.me/i_killed_my_clan>❰⏤͟͞ 𝚯𝗕𝗜𝗧𝗢 -//-❱</a>
-──────────────────
-๏ ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʜᴏᴡ ᴛᴏ ᴜsᴇ ʙᴜᴛᴛᴏɴ ᴛᴏ ɢᴇᴛ ɪɴғᴏʀᴍᴀᴛɪᴏɴ ᴀʙᴏᴜᴛ ᴍʏ ᴄᴏᴍᴍᴀɴᴅs.</b>
+✦ This bot helps you <b>rename files</b> with a custom caption and thumbnail.  
+✦ You can also set a <b>prefix and suffix</b> for your files.  
+✦ Simple, fast, and efficient! ⚡  
+
+──────────────────  
+⟡ <b>How to Use:</b> Click the button below to learn more about my commands.  
+⟡ <b>Created by:</b> <a href="https://t.me/Nxivm_network">Nxivm Network</a>  
+
 """
 
-    DONATE_TXT = """<b>
-👋 ʜᴇʏ ᴛʜᴇʀᴇ {},
+    DONATE_TXT = """
+<b>𖤐 Hey there, {}!</b>
 
-Jᴜsᴛ ᴡᴀɴᴛᴇᴅ ᴛᴏ ᴅʀᴏᴘ ᴀ ǫᴜɪᴄᴋ ᴛʜᴀɴᴋs ʏᴏᴜʀ ᴡᴀʏ! Iɴ ᴏᴜʀ ᴛɪɴʏ ᴄᴏʀɴᴇʀ ᴏғ ᴄʜᴀɴɴᴇʟs ᴀɴᴅ ʙᴏᴛs, ʜᴀᴠɪɴɢ ʏᴏᴜʀ sᴜᴘᴘᴏʀᴛ ғᴇᴇʟs ʟɪᴋᴇ ɢᴇᴛᴛɪɴɢ ᴀ ᴡᴀʀᴍ ʜᴜɢ.
+Just wanted to drop a quick <b>thank you</b> your way! In our little corner of channels and bots, having your support feels like receiving a warm embrace.
 
-Nᴏ ɴᴇᴇᴅ ᴛᴏ sᴛʀᴇss ᴀʙᴏᴜᴛ ᴅᴏɴᴀᴛɪᴏɴs – ʏᴏᴜʀ ʟɪᴛᴛʟᴇ sᴜᴘᴘᴏʀᴛ ᴀɴᴅ ᴄʟɪᴄᴋs ᴍᴇᴀɴ ᴛʜᴇ ᴡᴏʀʟᴅ ᴛᴏ ᴜs.
+No need to worry about donations – your small gestures and clicks mean the world to us. Every bit of support helps us keep things running smoothly.
 
-Bɪɢ ᴛʜᴀɴᴋs ғᴏʀ ʙᴇɪɴɢ ᴛʜᴇ sᴜᴘᴘᴏʀᴛ sᴜᴘᴇʀsᴛᴀʀ ɪɴ ᴏᴜʀ sᴍᴀʟʟ, ʙᴜᴛ ᴀᴡᴇsᴏᴍᴇ, sᴘᴀᴄᴇ!🌟</b>"""
+A <b>huge thanks</b> for being the support <b>superstar</b> in our small but amazing space! ✦
+"""
 
-    HELP_TXT = """<b>ᴏʙɪᴛᴏ ʀᴇɴᴀᴍᴇ ᴀᴡᴇsᴏᴍᴇ ғᴇᴀᴛᴜʀᴇs🫧
- 
-ᴏʙɪᴛᴏ ʀᴇɴᴀᴍᴇ ʙᴏᴛ ɪꜱ ᴀ ᴠᴇʀʏ ʜᴀɴᴅʏ ᴀɴᴅ ʜᴇʟᴘғᴜʟ ʙᴏᴛ  ᴛʜᴀᴛ ʜᴇʟᴘꜱ ʏᴏᴜ ʀᴇɴᴀᴍᴇ ᴀɴᴅ ᴍᴀɴᴀɢᴇ ʏᴏᴜʀ ꜰɪʟᴇꜱ ᴇꜰꜰᴏʀᴛʟᴇꜱꜱʟʏ.
+    HELP_TXT = """
+<b>✦ Nxivm Rename Bot - Powerful Features ✦</b>
 
-<u>ɪᴍᴘᴏʀᴛᴀɴᴛ ғᴇᴀᴛᴜʀᴇs:</u>
-➲ ᴄᴀɴ ʀᴇɴᴀᴍᴇ ᴀɴʏ ғɪʟᴇs.
-➲ ᴄᴀɴ ᴍᴀɴᴀɢᴇ ᴍᴇᴛᴀᴅᴀᴛᴀ.
-➲ ᴜᴘʟᴏᴀᴅ ɪɴ ᴅᴇsɪʀᴇ ᴍᴇᴅɪᴀ ᴛʏᴘᴇ.
-➲ ᴄᴀɴ sᴇᴛ ᴄᴜsᴛᴏᴍ ᴘʀᴇғɪx & sᴜғғɪx.
-➲ ʀᴇɴᴀᴍᴇ ғɪʟᴇs ᴠᴇʀʏ ǫᴜɪᴄᴋʟʏ.
-</b>  
+Nxivm Rename Bot is a <b>fast</b> and <b>efficient</b> tool to help you manage and rename files effortlessly.
+
+<u>Key Features:</u>
+➲ Rename any file with ease.  
+➲ Manage file metadata seamlessly.  
+➲ Upload in your preferred media type.  
+➲ Set custom <b>prefix</b> and <b>suffix</b> for files.  
+➲ Lightning-fast renaming process.  
+
+Use the commands below to get started and make the most of the bot!
 """
 
 #⚠️ Dᴏɴ'ᴛ Rᴇᴍᴏᴠᴇ Oᴜʀ Cʀᴇᴅɪᴛꜱ @GeekLuffy🙏🥲
-    ABOUT_TXT = """<b>
-» ᴅᴇᴠᴇʟᴏᴩᴇʀ : <a href=https://t.me/i_killed_my_clan>❰⏤͟͞ 𝚯𝗕𝗜𝗧𝗢 -//-❱</a>
-» ɢɪᴛʜᴜʙ :  <a href=https://t.me/i_killed_my_clan>❰⏤͟͞ 𝚯𝗕𝗜𝗧𝗢 -//-❱</a>
-» ʟɪʙʀᴀʀʏ : <a href=https://github.com/pyrogram>ᴘʏʀᴏɢʀᴀᴍ</a>
-» ʟᴀɴɢᴜᴀɢᴇ: <a href=https://www.python.org>ᴘʏᴛʜᴏɴ</a>
-» ꜱᴏᴜʀᴄᴇ ᴄᴏᴅᴇ : <a href=https://t.me/team_society_1>ᴏʙɪᴛᴏ ʀᴇɴᴀᴍᴇ ʙᴏᴛ</a>
-» ᴍᴀɪɴ ᴄʜᴀɴɴᴇʟ : <a href=https://t.me/Anime_Sub_Society>ᴀɴɪᴍᴇ sᴏᴄɪᴇᴛʏ</a>
-» ᴍᴀɪɴ ɢʀᴏᴜᴘ : <a href=https://t.me/ahss_help_zone>sᴏᴄɪᴇᴛʏ ᴄʜᴀᴛ ᴢᴏɴᴇ</a></b>"""
+    ABOUT_TXT = """
+<b>✦ Nxivm Rename Bot - About ✦</b>
+
+» <b>Developer:</b> <a href=https://t.me/Nxivm_network>Nxivm Network</a>    
+» <b>Library:</b> <a href=https://github.com/pyrogram>Pyrogram</a>  
+» <b>Language:</b> <a href=https://www.python.org>Python</a>  
+» <b>Network:</b> <a href=https://t.me/Nxivm_Network>Nxivm Network</a>  
+» <b>Support:</b> <a href=https://t.me/Nxivm_support>Nxivm Support</a>  
+"""
 
     META_TXT = """
-**ᴍᴀɴᴀɢɪɴɢ ᴍᴇᴛᴀᴅᴀᴛᴀ ғᴏʀ ʏᴏᴜʀ ᴠɪᴅᴇᴏs ᴀɴᴅ ғɪʟᴇs**
+✦ **ＭＥＴＡＤＡＴＡ  ＭＡＮＡＧＥＭＥＮＴ** ✦  
 
-**ᴠᴀʀɪᴏᴜꜱ ᴍᴇᴛᴀᴅᴀᴛᴀ:**
+➤ **ᴠᴀʀɪᴏᴜꜱ ᴍᴇᴛᴀᴅᴀᴛᴀ**:  
+╭───────────⍟  
+┃ ⦿ **Ｔｉｔｌｅ** ⌁ Set a custom title.  
+┃ ⦿ **Ａｕｔｈｏｒ** ⌁ Define the creator.  
+┃ ⦿ **Ａｒｔｉｓｔ** ⌁ Specify the artist.  
+┃ ⦿ **Ａｕｄｉｏ** ⌁ Assign an audio title.  
+┃ ⦿ **Ｓｕｂｔｉｔｌｅ** ⌁ Set subtitle info.  
+┃ ⦿ **Ｖｉｄｅｏ** ⌁ Name the video file.  
+╰───────────⍟  
 
-- **ᴛɪᴛʟᴇ**: Descriptive title of the media.
-- **ᴀᴜᴛʜᴏʀ**: The creator or owner of the media.
-- **ᴀʀᴛɪꜱᴛ**: The artist associated with the media.
-- **ᴀᴜᴅɪᴏ**: Title or description of audio content.
-- **ꜱᴜʙᴛɪᴛʟᴇ**: Title of subtitle content.
-- **ᴠɪᴅᴇᴏ**: Title or description of video content.
+✦ **ＣＯＭＭＡＮＤＳ** ✦  
 
-**ᴄᴏᴍᴍᴀɴᴅꜱ ᴛᴏ ᴛᴜʀɴ ᴏɴ ᴏғғ ᴍᴇᴛᴀᴅᴀᴛᴀ:**
-➜ /metadata: Turn on or off metadata.
+➤ **Ｔｏ Toggle Metadata**:  
+◈ `/metadata` ⌁ Enable / Disable metadata.  
 
-**ᴄᴏᴍᴍᴀɴᴅꜱ ᴛᴏ ꜱᴇᴛ ᴍᴇᴛᴀᴅᴀᴛᴀ:**
+➤ **Ｔｏ Set Metadata**:  
+◈ `/settitle` ⌁ 𝑺𝒆𝒕 𝒂 𝒄𝒖𝒔𝒕𝒐𝒎 𝒕𝒊𝒕𝒍𝒆.  
+◈ `/setauthor` ⌁ 𝑺𝒆𝒕 𝒕𝒉𝒆 𝒂𝒖𝒕𝒉𝒐𝒓.  
+◈ `/setartist` ⌁ 𝑺𝒆𝒕 𝒕𝒉𝒆 𝒂𝒓𝒕𝒊𝒔𝒕.  
+◈ `/setaudio` ⌁ 𝑺𝒆𝒕 𝒂𝒖𝒅𝒊𝒐 𝒕𝒊𝒕𝒍𝒆.  
+◈ `/setsubtitle` ⌁ 𝑺𝒆𝒕 𝒔𝒖𝒃𝒕𝒊𝒕𝒍𝒆 𝒕𝒊𝒕𝒍𝒆.  
+◈ `/setvideo` ⌁ 𝑺𝒆𝒕 𝒗𝒊𝒅𝒆𝒐 𝒕𝒊𝒕𝒍𝒆.  
 
-➜ /settitle: Set a custom title of media.
-➜ /setauthor: Set the author.
-➜ /setartist: Set the artist.
-➜ /setaudio: Set audio title.
-➜ /setsubtitle: Set subtitle title.
-➜ /setvideo: Set video title.
+✦ **ＥＸＡＭＰＬＥ** ✦  
+➜ `/settitle 𝑴𝒚 𝑨𝒘𝒆𝒔𝒐𝒎𝒆 𝑴𝒐𝒗𝒊𝒆`  
 
-**ᴇxᴀᴍᴘʟᴇ:** /settitle Your Title Here
-
-**ᴜꜱᴇ ᴛʜᴇꜱᴇ ᴄᴏᴍᴍᴀɴᴅꜱ ᴛᴏ ᴇɴʀɪᴄʜ ʏᴏᴜʀ ᴍᴇᴅɪᴀ ᴡɪᴛʜ ᴀᴅᴅɪᴛɪᴏɴᴀʟ ᴍᴇᴛᴀᴅᴀᴛᴀ ɪɴꜰᴏʀᴍᴀᴛɪᴏɴ!**
+**⚡ Enhance Your Media with Custom Metadata! ⚡**
 """
