@@ -1,0 +1,59 @@
+{
+    "name": "Renamer Bot",
+    "description": "Telegram File Renamer Bot ",
+    "logo": "https://graph.org/file/91ab4b346dddd0652958c.jpg",
+    "keywords": ["Renamer Bot", "Mongo DB"],    
+    "repository": "https://github.com/Umaidahmad01/EDGE_RENAME.git",
+    "env": {
+        "API_ID": {
+            "description": "Your APP ID From my.telegram.org ",
+            "value": "20718334"
+        },
+        "API_HASH": {
+            "description": "Your API Hash From my.telegram.org ",
+            "value": "4e81464b29d79c58d0ad8a0c55ece4a5"
+        },
+        "WEBHOOK": {
+            "description": "if your server is need web service! value = True else value = False",
+            "value": "False"
+        },
+        "FORCE_SUB": {
+            "description": "Your force sub channel user name without [@] ",
+            "value": "",
+            "required": false 
+        },
+        "BOT_TOKEN": {
+            "description": "Your Bot Token From @BotFather",
+            "value": "7226201611:AAGasefpJoqUdU3WalYlZknEpAfV7FVfak0"
+        },
+        "ADMIN": {
+            "description":"Add Your User ID multiple is use space to split"
+        },
+        "LOG_CHANNEL": {
+            "description":"Bot Log Sending Channel (just create a private channel and add bot to admin and take channel id to add this variable) ⚠️ id startswith -100 must",
+            "required": false           
+        },
+        "DB_URL": {
+            "description": "Your Mongo DB URL Obtained From mongodb.com",
+            "value": "mongodb+srv://Sukuna:Sukuna123@cluster0.xya73s9.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+        },
+        "DB_NAME":{ 
+            "description":"Your Mongo DB Database Name ",
+            "value": "Cluster0",
+            "required": false
+        },
+        "START_PIC": {
+            "description": "Your Bot start cmd Pic from @MT_TelegraPH_Bot",
+            "value": "https://envs.sh/w3g.mp4",
+            "required": false
+        }
+    },
+    "buildpacks": [
+        {
+            "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+        },
+        {
+            "url": "heroku/python"
+        }
+    ]
+}
