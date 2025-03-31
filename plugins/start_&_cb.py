@@ -44,13 +44,13 @@ async def start(client, message):
     user = message.from_user
     await db.add_user(client, message)
     button = InlineKeyboardMarkup([[
-        InlineKeyboardButton("Hᴏᴡ ᴛᴏ Usᴇ", callback_data='help')
+        InlineKeyboardButton("How to use", callback_data='help')
     ], [
-        InlineKeyboardButton('Uᴩᴅᴀᴛᴇꜱ', url='https://t.me/Yugen_Bots'),
-        InlineKeyboardButton('Sᴜᴩᴩᴏʀᴛ', url='https://t.me/Manga_Yugen_GC')
+        InlineKeyboardButton('Network', url='https://t.me/nxivm_network'),
+        InlineKeyboardButton('Support', url='https://t.me/nxivm_support')
     ], [
-        InlineKeyboardButton('Aʙᴏᴜᴛ', callback_data='about'),
-        InlineKeyboardButton('Dᴏɴᴀᴛᴇ', callback_data='donate')
+        InlineKeyboardButton('About', callback_data='about'),
+        InlineKeyboardButton('Donate', callback_data='donate')
     ]])
     if Config.START_PIC:
         await message.reply_video(Config.START_PIC, caption=Txt.START_TXT.format(user.mention), reply_markup=button)
@@ -67,13 +67,13 @@ async def cb_handler(client, query: CallbackQuery):
             text=Txt.START_TXT.format(query.from_user.mention),
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup([[
-                InlineKeyboardButton("Hᴏᴡ ᴛᴏ Usᴇ", callback_data='help')
+                InlineKeyboardButton("How to use", callback_data='help')
             ], [
-                InlineKeyboardButton('Uᴩᴅᴀᴛᴇꜱ', url='https://t.me/VoatCb'),
-                InlineKeyboardButton('Sᴜᴩᴩᴏʀᴛ', url='https://t.me/VOATcb')
+                InlineKeyboardButton('Network', url='https://t.me/nxivm_network'),
+                InlineKeyboardButton('Support', url='https://t.me/nxivm_support')
             ], [
-                InlineKeyboardButton('Aʙᴏᴜᴛ', callback_data='about'),
-                InlineKeyboardButton('Dᴏɴᴀᴛᴇ', callback_data='donate')
+                InlineKeyboardButton('About', callback_data='about'),
+                InlineKeyboardButton('Donate', callback_data='donate')
             ]])
         )
     elif data == "on_metadata":
@@ -149,8 +149,8 @@ async def cb_handler(client, query: CallbackQuery):
             text=Txt.META_TXT,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup([[
-                InlineKeyboardButton("Hᴏᴍᴇ", callback_data="start"),
-                InlineKeyboardButton("Bᴀᴄᴋ", callback_data="commands")
+                InlineKeyboardButton("Home", callback_data="start"),
+                InlineKeyboardButton("Back", callback_data="commands")
             ]])
         )
 
@@ -161,8 +161,8 @@ async def cb_handler(client, query: CallbackQuery):
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup([[
                 # ⚠️ don't change source code & source link ⚠️ #
-                InlineKeyboardButton("Cʟᴏꜱᴇ", callback_data="close"),
-                InlineKeyboardButton("Bᴀᴄᴋ", callback_data="start")
+                InlineKeyboardButton("Close", callback_data="close"),
+                InlineKeyboardButton("Back", callback_data="start")
             ]])
         )
     elif data == "help":
@@ -179,8 +179,8 @@ async def cb_handler(client, query: CallbackQuery):
                 [
                     InlineKeyboardButton("Suffix & Prefix", callback_data="suffix_prefix")],
                 [
-                    InlineKeyboardButton("Cʟᴏꜱᴇ", callback_data="close"),
-                    InlineKeyboardButton("Bᴀᴄᴋ", callback_data="start")
+                    InlineKeyboardButton("Close", callback_data="close"),
+                    InlineKeyboardButton("Back", callback_data="start")
                 ]])
         )
     elif data == "about":
@@ -189,65 +189,72 @@ async def cb_handler(client, query: CallbackQuery):
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup([[
                 # ⚠️ don't change source code & source link ⚠️ #
-                InlineKeyboardButton("Cʟᴏꜱᴇ", callback_data="close"),
-                InlineKeyboardButton("Bᴀᴄᴋ", callback_data="start")
+                InlineKeyboardButton("Close", callback_data="close"),
+                InlineKeyboardButton("Back", callback_data="start")
             ]])
         )
 
     elif data == "caption":
         await query.message.edit_text(
-            text="""<b><u>ᴛᴏ ꜱᴇᴛ ᴄᴜꜱᴛᴏᴍ ᴄᴀᴘᴛɪᴏɴ ᴀɴᴅ ᴍᴇᴅɪᴀ ᴛʏᴘᴇ</u></b>
-**ᴠᴀʀɪᴀʙʟᴇꜱ :**         
-ꜱɪᴢᴇ: {ꜰɪʟᴇꜱɪᴢᴇ}
-ᴅᴜʀᴀᴛɪᴏɴ: {duration}
-ꜰɪʟᴇɴᴀᴍᴇ: {ꜰɪʟᴇɴᴀᴍᴇ}
-**➜ /set_caption:** ᴛᴏ ꜱᴇᴛ ᴀ ᴄᴜꜱᴛᴏᴍ ᴄᴀᴘᴛɪᴏɴ.
-**➜ /see_caption:** ᴛᴏ ᴠɪᴇᴡ ʏᴏᴜʀ ᴄᴜꜱᴛᴏᴍ ᴄᴀᴘᴛɪᴏɴ.
-**➜ /del_caption:** ᴛᴏ ᴅᴇʟᴇᴛᴇ ʏᴏᴜʀ ᴄᴜꜱᴛᴏᴍ ᴄᴀᴘᴛɪᴏɴ.
+            text = """ 
+<b><u>To Set Custom Caption and Media Type</u></b>
 
-**ᴇxᴀᴍᴘʟᴇ: /setcaption** ꜰɪʟᴇ ɴᴀᴍᴇ: {ꜰɪʟᴇɴᴀᴍᴇ}
-        """,
+**Variables:**  
+- Size: {filesize}  
+- Duration: {duration}  
+- Filename: {filename}  
+
+**Commands:**  
+➜ /set_caption - Set a custom caption.  
+➜ /see_caption - View your custom caption.  
+➜ /del_caption - Delete your custom caption.  
+
+**Example:**  
+/ setcaption File Name: {filename}  
+""",
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup([[
-                InlineKeyboardButton("Hᴏᴍᴇ", callback_data="start"),
-                InlineKeyboardButton("Bᴀᴄᴋ", callback_data="help")
+                InlineKeyboardButton("Home", callback_data="start"),
+                InlineKeyboardButton("Back", callback_data="help")
             ]])
         )
     elif data == "thumbnail":
         await query.message.edit_text(
-            text="""<b>ᴛᴏ ꜱᴇᴛ ᴄᴜꜱᴛᴏᴍ ᴛʜᴜᴍʙɴᴀɪʟ</b>
+            text = """  
+★ To Set Custom Thumbnail ★  
 
-**➜ /start:** ꜱᴇɴᴅ ᴀɴʏ ᴘʜᴏᴛᴏ ᴛᴏ ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ ꜱᴇᴛ ɪᴛ ᴀꜱ ᴀ ᴛʜᴜᴍʙɴᴀɪʟ..
-**➜ /del_thumb:** ᴜꜱᴇ ᴛʜɪꜱ ᴄᴏᴍᴍᴀɴᴅ ᴛᴏ ᴅᴇʟᴇᴛᴇ ʏᴏᴜʀ ᴏʟᴅ ᴛʜᴜᴍʙɴᴀɪʟ.
-**➜ /view_thumb:** ᴜꜱᴇ ᴛʜɪꜱ ᴄᴏᴍᴍᴀɴᴅ ᴛᴏ ᴠɪᴇᴡ ʏᴏᴜʀ ᴄᴜʀʀᴇɴᴛ ᴛʜᴜᴍʙɴᴀɪʟ.
+➜ /start: Send any photo to automatically set it as a thumbnail.  
+➜ /del_thumb: Use this command to delete your old thumbnail.  
+➜ /view_thumb: Use this command to view your current thumbnail.  
 
-ɴᴏᴛᴇ: ɪꜰ ɴᴏ ᴛʜᴜᴍʙɴᴀɪʟ ꜱᴀᴠᴇᴅ ɪɴ ʙᴏᴛ ᴛʜᴇɴ, ɪᴛ ᴡɪʟʟ ᴜꜱᴇ ᴛʜᴜᴍʙɴᴀɪʟ ᴏꜰ ᴛʜᴇ ᴏʀɪɢɪɴɪᴀʟ ꜰɪʟᴇ ᴛᴏ ꜱᴇᴛ ɪɴ ʀᴇɴᴀᴍᴇᴅ ꜰɪʟᴇ
-        """,
+✦ Note: If no thumbnail is saved in the bot, it will use the thumbnail of the original file to set in the renamed file.  
+""",
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup([[
-                InlineKeyboardButton("Hᴏᴍᴇ", callback_data="start"),
-                InlineKeyboardButton("Bᴀᴄᴋ", callback_data="help")
+                InlineKeyboardButton("Home", callback_data="start"),
+                InlineKeyboardButton("Back", callback_data="help")
             ]])
         )
 
     elif data == "suffix_prefix":
         await query.message.edit_text(
-            text="""<b>ᴛᴏ ꜱᴇᴛ ᴄᴜꜱᴛᴏᴍ ꜱᴜғғɪx & ᴘʀᴇғɪx</b>
-            
-**➜ /set_prefix:** ᴛᴏ ꜱᴇᴛ ᴀ ᴄᴜꜱᴛᴏᴍ ᴘʀᴇғɪx.
-**➜ /del_prefix:** ᴛᴏ ᴅᴇʟᴇᴛᴇ ʏᴏᴜʀ ᴄᴜꜱᴛᴏᴍ ᴘʀᴇғɪx.
-**➜ /see_prefix:** ᴛᴏ ᴠɪᴇᴡ ʏᴏᴜʀ ᴄᴜꜱᴛᴏᴍ ᴘʀᴇғɪx.
-            
-**➜ /set_suffix:** ᴛᴏ ꜱᴇᴛ ᴀ ᴄᴜꜱᴛᴏᴍ ꜱᴜғғɪx.
-**➜ /del_suffix:** ᴛᴏ ᴅᴇʟᴇᴛᴇ ʏᴏᴜʀ ᴄᴜꜱᴛᴏᴍ ꜱᴜғғɪx.
-**➜ /see_suffix:** ᴛᴏ ᴠɪᴇᴡ ʏᴏᴜʀ ᴄᴜꜱᴛᴏᴍ ꜱᴜғғɪx.
-            
-ᴇxᴀᴍᴘʟᴇ: /set_prefix [AS] | /set_suffix [Animesociety]
-            """,
+            text = """  
+★ To Set Custom Suffix & Prefix ★  
+
+➜ /set_prefix: To set a custom prefix.  
+➜ /del_prefix: To delete your custom prefix.  
+➜ /see_prefix: To view your custom prefix.  
+
+➜ /set_suffix: To set a custom suffix.  
+➜ /del_suffix: To delete your custom suffix.  
+➜ /see_suffix: To view your custom suffix.  
+
+✦ Example: /set_prefix [NA] | /set_suffix [NxivmAnime]  
+""",
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup([[
-                InlineKeyboardButton("Hᴏᴍᴇ", callback_data="start"),
-                InlineKeyboardButton("Bᴀᴄᴋ", callback_data="help")
+                InlineKeyboardButton("Home", callback_data="start"),
+                InlineKeyboardButton("Back", callback_data="help")
             ]])
         )
     elif data == "close":
