@@ -17,7 +17,7 @@ class Config(object):
     START_PIC   = os.environ.get("START_PIC", "https://envs.sh/_A8.jpg")
     ADMIN       = [int(admin) if id_pattern.search(admin) else admin for admin in os.environ.get('ADMIN', '1110013191, 6698364560, 6663845789, 5126166591, 6618620897, 7445650518').split()]
     FORCE_SUB_1 = os.environ.get("FORCE_SUB_1", "-1001707354372")
-    FORCE_SUB_2 = os.environ.get("FORCE_SUB_2", "-100167792809")
+    FORCE_SUB_2 = os.environ.get("FORCE_SUB_2", "-1001677928096")
     LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1002183841044"))
     DUMP_CHANNEL = int(os.environ.get("DUMP_CHANNEL", "-1002648752950"))
 
